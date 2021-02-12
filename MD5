@@ -1,6 +1,6 @@
-2aa499aac1f9e134119895ac4fa8764e *DESCRIPTION
+baf87630e35ea256f8f01ecbfbf30903 *DESCRIPTION
 d373889f3a235f4b414ba673410f165c *NAMESPACE
-0c3da35eca39b71af984d6c694e4f61c *NEWS
+6e1b1b3b8e7810fb6d3088b74fdf28d3 *NEWS
 090f29904f04d3617c62e5d0c926097f *R/Coefficient_Functions.R
 2648f7812baf371b8151961171b7d36c *R/Coefficient_Plot_Functions.R
 2df3fcd57675a6dcb1beea4a418ae1ce *R/Construction_Functions.R
@@ -39,4 +39,4 @@ e6141e912f0e254b24bde79dad3961ab *src/autoconfig.h
 e6141e912f0e254b24bde79dad3961ab *src/autoconfig.win.h
 3e0eb991155a4d7e1fdee28341c92791 *src/config.h
 b1420ec539b62f224a7f750bd93c5461 *tests/testthat.R
-1eb5c7e0d01d12fa8477600c0051e453 *tests/testthat/test_cv_function.R
+e976c3875f3ebea2c4fe9e7b5d0c3199 *tests/testthat/test_cv_function.R

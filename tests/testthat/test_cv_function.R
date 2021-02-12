@@ -3,8 +3,9 @@
 # --------------------------------------------------
 
 # Required libraries
-library(SplitGLM)
 library(mvnfast)
+library(SplitGLM)
+library(glmnet)
 
 # Context of test script
 context("Verify output of cross-validation function.")
@@ -63,25 +64,26 @@ test_that("Error in the cross-validation function.", {
   prob.train <- sigmoid(x.train %*% beta + offset)
   y.train <- rbinom(n, 1, prob.train)
   mean(y.train)
-  # Test data
-  x.test <- rmvn(N, mu = rep(0, p), sigma = Sigma)
-  prob.test <- sigmoid(x.test %*% beta + offset)
-  y.test <- rbinom(N, 1, prob.test)
-  mean(y.test)
+
+  # glmnet - CV (Single Group)
+  glmnet.fit <- cv.glmnet(x.train, y.train,
+                          family="binomial",
+                          alpha=3/4)
+  glmnet.coef <- as.vector(coef(glmnet.fit, s="lambda.min"))
   
-  # SplitGLM - CV (Multiple Groups)
-  split.out <- cv.SplitGLM(x.train, y.train,
-                           glm_type="Logistic",
-                           G=10, include_intercept=TRUE,
-                           alpha_s=3/4, alpha_d=1,
-                           n_lambda_sparsity=50, n_lambda_diversity=50,
-                           tolerance=1e-3, max_iter=1e3,
-                           n_folds=5,
-                           active_set=FALSE,
-                           n_threads=5)
-  split.coef <- coef(split.out)
+  # # SplitGLM - CV (Multiple Groups)
+  # split.out <- cv.SplitGLM(x.train, y.train,
+  #                          glm_type="Logistic",
+  #                          G=10, include_intercept=TRUE,
+  #                          alpha_s=3/4, alpha_d=1,
+  #                          n_lambda_sparsity=50, n_lambda_diversity=50,
+  #                          tolerance=1e-3, max_iter=1e3,
+  #                          n_folds=5,
+  #                          active_set=FALSE,
+  #                          n_threads=5)
+  # split.coef <- coef(split.out)
   
-  expect_vector(split.coef)
+  expect_vector(glmnet.coef)
 
 })
 

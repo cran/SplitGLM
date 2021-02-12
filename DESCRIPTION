@@ -1,8 +1,8 @@
 Package: SplitGLM
 Type: Package
 Title: Split Generalized Linear Models
-Version: 1.0.0
-Date: 2021-02-03
+Version: 1.0.1
+Date: 2021-02-10
 Author: Anthony Christidis <anthony.christidis@stat.ubc.ca>,
     Stefan Van Aelst <stefan.vanaelst@kuleuven.be>,
     Ruben Zamar <ruben@stat.ubc.ca>
@@ -14,11 +14,11 @@ Description: Functions to compute split generalized linear models. The approach 
              that encourages sparsity within each group and diversity among them.
 License: GPL (>= 2)
 Biarch: true
-Imports: Rcpp (>= 1.0.3), mvnfast
+Imports: Rcpp (>= 1.0.3)
 LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.0.2
-Suggests: testthat, vctrs
+Suggests: testthat, vctrs, mvnfast, glmnet
 NeedsCompilation: yes
-Packaged: 2021-02-04 05:56:10 UTC; antho
+Packaged: 2021-02-12 07:35:25 UTC; antho
 Repository: CRAN
-Date/Publication: 2021-02-09 10:00:03 UTC
+Date/Publication: 2021-02-12 16:50:22 UTC
