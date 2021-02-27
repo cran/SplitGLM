@@ -1,8 +1,8 @@
 Package: SplitGLM
 Type: Package
 Title: Split Generalized Linear Models
-Version: 1.0.1
-Date: 2021-02-10
+Version: 1.0.2
+Date: 2021-02-26
 Author: Anthony Christidis <anthony.christidis@stat.ubc.ca>,
     Stefan Van Aelst <stefan.vanaelst@kuleuven.be>,
     Ruben Zamar <ruben@stat.ubc.ca>
@@ -19,6 +19,6 @@ LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.0.2
 Suggests: testthat, vctrs, mvnfast, glmnet
 NeedsCompilation: yes
-Packaged: 2021-02-12 07:35:25 UTC; antho
+Packaged: 2021-02-26 23:27:42 UTC; antho
 Repository: CRAN
-Date/Publication: 2021-02-12 16:50:22 UTC
+Date/Publication: 2021-02-27 05:20:02 UTC

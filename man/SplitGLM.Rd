@@ -35,9 +35,9 @@ SplitGLM(
 
 \item{alpha_d}{Mixing parameter for diversity penalty. Default is 1.}
 
-\item{lambda_sparsity}{Number of candidates for the sparsity penalty parameter. Default is 100.}
+\item{lambda_sparsity}{Sparsity tuning parameter value.}
 
-\item{lambda_diversity}{Number of candidates for the sparsity penalty parameter. Default is 100.}
+\item{lambda_diversity}{Diversity tuning parameter value.}
 
 \item{tolerance}{Convergence criteria for the coefficients. Default is 1e-3.}
 

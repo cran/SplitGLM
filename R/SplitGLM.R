@@ -17,8 +17,8 @@
 #' @param include_intercept Boolean variable to determine if there is intercept (default is TRUE) or not.
 #' @param alpha_s Elastic net mixing parmeter. Default is 3/4.
 #' @param alpha_d Mixing parameter for diversity penalty. Default is 1.
-#' @param lambda_sparsity Number of candidates for the sparsity penalty parameter. Default is 100.
-#' @param lambda_diversity Number of candidates for the sparsity penalty parameter. Default is 100.
+#' @param lambda_sparsity Sparsity tuning parameter value.
+#' @param lambda_diversity Diversity tuning parameter value.
 #' @param tolerance Convergence criteria for the coefficients. Default is 1e-3.
 #' @param max_iter Maximum number of iterations in the algorithm. Default is 1e5.
 #' @param active_set Active set convergence for the algorithm. Default is FALSE.
