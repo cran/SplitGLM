@@ -6,3 +6,6 @@
 
 # SplitGLM 1.0.2
 * Fix documentation for SplitGLM function.
+
+# SplitGLM 1.0.3
+* Fix potential memory leak from OpenMP.

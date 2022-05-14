@@ -6,6 +6,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // CV_SWEN_Main
 Rcpp::List CV_SWEN_Main(arma::mat& x, arma::vec& y, arma::uword& type, arma::uword& G, arma::uword& include_intercept, double& alpha_s, double& alpha_d, arma::uword& n_lambda_sparsity, arma::uword& n_lambda_diversity, double& tolerance, arma::uword& max_iter, arma::uword& n_folds, arma::uword& active_set, arma::uword& full_diversity, arma::uword& n_threads);
 RcppExport SEXP _SplitGLM_CV_SWEN_Main(SEXP xSEXP, SEXP ySEXP, SEXP typeSEXP, SEXP GSEXP, SEXP include_interceptSEXP, SEXP alpha_sSEXP, SEXP alpha_dSEXP, SEXP n_lambda_sparsitySEXP, SEXP n_lambda_diversitySEXP, SEXP toleranceSEXP, SEXP max_iterSEXP, SEXP n_foldsSEXP, SEXP active_setSEXP, SEXP full_diversitySEXP, SEXP n_threadsSEXP) {

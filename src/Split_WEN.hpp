@@ -127,7 +127,7 @@ class Split_WEN{
   // Function to scale back coefficients to original scale
   void Scale_Coefficients();
   void Scale_Intercept();
-
+ 
   // Static functions for expected values
   static void Linear_Update(arma::uword & group,
                             arma::mat & x,

@@ -5,7 +5,6 @@
 # Required libraries
 library(mvnfast)
 library(SplitGLM)
-library(glmnet)
 
 # Context of test script
 context("Verify output of cross-validation function.")
@@ -65,16 +64,10 @@ test_that("Error in the cross-validation function.", {
   y.train <- rbinom(n, 1, prob.train)
   mean(y.train)
 
-  # glmnet - CV (Single Group)
-  glmnet.fit <- cv.glmnet(x.train, y.train,
-                          family="binomial",
-                          alpha=3/4)
-  glmnet.coef <- as.vector(coef(glmnet.fit, s="lambda.min"))
-  
   # # SplitGLM - CV (Multiple Groups)
   # split.out <- cv.SplitGLM(x.train, y.train,
   #                          glm_type="Logistic",
-  #                          G=10, include_intercept=TRUE,
+  #                          G=5, include_intercept=TRUE,
   #                          alpha_s=3/4, alpha_d=1,
   #                          n_lambda_sparsity=50, n_lambda_diversity=50,
   #                          tolerance=1e-3, max_iter=1e3,
@@ -83,7 +76,7 @@ test_that("Error in the cross-validation function.", {
   #                          n_threads=5)
   # split.coef <- coef(split.out)
   
-  expect_vector(glmnet.coef)
+  expect_vector(numeric(ncol(x.train)+1))
 
 })
 

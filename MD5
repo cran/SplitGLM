@@ -1,6 +1,6 @@
-3c6dedfdc3aa57937b4599fa2aa79094 *DESCRIPTION
+528131df9a5f11d11d710ddd9be70de8 *DESCRIPTION
 d373889f3a235f4b414ba673410f165c *NAMESPACE
-ae69b29d3163537962ae641fea15bf68 *NEWS
+31177bc9dc34b1f514254e960ad62d0f *NEWS
 090f29904f04d3617c62e5d0c926097f *R/Coefficient_Functions.R
 2648f7812baf371b8151961171b7d36c *R/Coefficient_Plot_Functions.R
 2df3fcd57675a6dcb1beea4a418ae1ce *R/Construction_Functions.R
@@ -9,7 +9,7 @@ f8c9dbeee0966049ed578c7644735cc6 *R/Prediction_Functions.R
 9f7bd257f3dc56357095e247eee13a31 *R/RcppExports.R
 f7ec5c1a4d3fb174784379957efb53f4 *R/SplitGLM.R
 5dcb5f6fff7aa28dcde7c00936220d2d *R/cv.SplitGLM.R
-cf2548e34d0a2c07612e0b1879e98718 *README.md
+6e9328e36b95cd4ade09898b1eea55cf *README.md
 ccdbb882c645f67f951535d26054e50e *cleanup
 acd5eb882b0c1081c6cfd53ba6c2bf68 *configure
 b06d768110b6fe9e8ae7f7b4e3c88143 *configure.ac
@@ -21,16 +21,16 @@ dcc8f464c63353c2f6e3c3114e2d98fc *man/cv.SplitGLM.Rd
 b4f62b19c5e13c8f287036f4ca4608ab *man/plot.cv.SplitGLM.Rd
 0268085e09ebcd0802508e922955358b *man/predict.SplitGLM.Rd
 308ee7bec61196e192018ac0e03284ec *man/predict.cv.SplitGLM.Rd
-0900fb3fef4d31166203491a1c4ef489 *src/CV_Split_WEN.cpp
-48744bd4c504f9b08bccfd4118f7d362 *src/CV_Split_WEN.hpp
+34ac4a1e996e37dbf8b60a390d870398 *src/CV_Split_WEN.cpp
+9d408eb1069f9af8bd1cc5933d51eca8 *src/CV_Split_WEN.hpp
 b66731dddb0278e214dced27a1cbb78c *src/CV_Split_WEN_Main.cpp
-76b53800e981666856234d5bc84ff1e1 *src/CV_WEN.cpp
-9d3c6562212111742ab5e9a3400c95c5 *src/CV_WEN.hpp
+8988f938aee3dccbea95645fe4e38ea5 *src/CV_WEN.cpp
+9b523be3b64d05f9dc93edbb54a6f810 *src/CV_WEN.hpp
 09728da56ce03f0019e9c8198a486125 *src/Makevars.in
 01928104d4b57c82d4195b21f02b6b26 *src/Makevars.win
-0fb9b230b2de9a786625b481ee97a8b8 *src/RcppExports.cpp
+1451cd435efbde872a915e14975aee03 *src/RcppExports.cpp
 62dc5c58c9416ffd2c01e568299a3188 *src/Split_WEN.cpp
-322b243fff4e989e32ea5cd11b40ed20 *src/Split_WEN.hpp
+036540c9cc06a8ee7f2979ec28a4338e *src/Split_WEN.hpp
 b37c0fc75b0fc087ac0cecf01f357cfc *src/Split_WEN_Main.cpp
 6938c6a2681a02e10e40d258eb0d3c39 *src/WEN.cpp
 96c1d307dfe7307c455630aa73423927 *src/WEN.hpp
@@ -39,4 +39,4 @@ e6141e912f0e254b24bde79dad3961ab *src/autoconfig.h
 e6141e912f0e254b24bde79dad3961ab *src/autoconfig.win.h
 3e0eb991155a4d7e1fdee28341c92791 *src/config.h
 b1420ec539b62f224a7f750bd93c5461 *tests/testthat.R
-e976c3875f3ebea2c4fe9e7b5d0c3199 *tests/testthat/test_cv_function.R
+a706c4af99a439c3661e31fe6cf82c16 *tests/testthat/test_cv_function.R
