@@ -1,8 +1,8 @@
 Package: SplitGLM
 Type: Package
 Title: Split Generalized Linear Models
-Version: 1.0.3
-Date: 2022-05-13
+Version: 1.0.4
+Date: 2022-06-01
 Authors@R: c(person("Anthony", "Christidis", role=c("aut", "cre"), email = "anthony.christidis@stat.ubc.ca"),
 	     person("Stefan", "Van Aelst", role=c("aut"), email = "stefan.vanaelst@kuleuven.be"),
 	     person("Ruben", "Zamar", role=c("aut"), email = "ruben@stat.ubc.ca"))
@@ -21,9 +21,9 @@ LinkingTo: Rcpp, RcppArmadillo
 RoxygenNote: 7.0.2
 Suggests: testthat, vctrs, mvnfast
 NeedsCompilation: yes
-Packaged: 2022-05-14 00:51:04 UTC; antho
+Packaged: 2022-06-02 02:49:13 UTC; antho
 Author: Anthony Christidis [aut, cre],
   Stefan Van Aelst [aut],
   Ruben Zamar [aut]
 Repository: CRAN
-Date/Publication: 2022-05-14 23:20:29 UTC
+Date/Publication: 2022-06-02 03:10:02 UTC

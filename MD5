@@ -1,6 +1,6 @@
-528131df9a5f11d11d710ddd9be70de8 *DESCRIPTION
+61470020962513aa6ea2551746d05358 *DESCRIPTION
 d373889f3a235f4b414ba673410f165c *NAMESPACE
-31177bc9dc34b1f514254e960ad62d0f *NEWS
+5fbb5ee6676b7255d77b078915fef042 *NEWS
 090f29904f04d3617c62e5d0c926097f *R/Coefficient_Functions.R
 2648f7812baf371b8151961171b7d36c *R/Coefficient_Plot_Functions.R
 2df3fcd57675a6dcb1beea4a418ae1ce *R/Construction_Functions.R
@@ -21,7 +21,7 @@ dcc8f464c63353c2f6e3c3114e2d98fc *man/cv.SplitGLM.Rd
 b4f62b19c5e13c8f287036f4ca4608ab *man/plot.cv.SplitGLM.Rd
 0268085e09ebcd0802508e922955358b *man/predict.SplitGLM.Rd
 308ee7bec61196e192018ac0e03284ec *man/predict.cv.SplitGLM.Rd
-34ac4a1e996e37dbf8b60a390d870398 *src/CV_Split_WEN.cpp
+3bcc60cfe095d798041368c933f94442 *src/CV_Split_WEN.cpp
 9d408eb1069f9af8bd1cc5933d51eca8 *src/CV_Split_WEN.hpp
 b66731dddb0278e214dced27a1cbb78c *src/CV_Split_WEN_Main.cpp
 8988f938aee3dccbea95645fe4e38ea5 *src/CV_WEN.cpp

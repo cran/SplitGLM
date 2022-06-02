@@ -374,6 +374,7 @@ void CV_Split_WEN::Compute_CV_Grid(arma::uvec & sample_ind, arma::uvec & fold_in
     cv_errors_diversity = arma::zeros(n_lambda_diversity);
 
     // Looping over the folds
+    # pragma omp parallel for num_threads(n_threads)
     for(arma::uword fold=0; fold<n_folds; fold++){ 
       
       // Get test and training samples
