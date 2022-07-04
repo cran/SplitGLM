@@ -5,7 +5,7 @@
  * Package Name: SplitGLM
  *
  * Created by Anthony-A. Christidis.
- * Copyright © Anthony-A. Christidis. All rights reserved.
+ * Copyright Â© Anthony-A. Christidis. All rights reserved.
  * ===========================================================
  */
 
@@ -160,7 +160,7 @@ void Split_WEN::Adjust_Expected_Weights(arma::uword & group){
 }
 // Function to adjust the residuals
 void Split_WEN::Adjust_Residuals(arma::uword & group){
-  residuals.col(group) = y - expected_val.col(group);
+  residuals.col(group) = pow(std::abs(y - expected_val.col(group)),pow(2*std::abs(y - expected_val.col(group)),-1));
 }
 // Iterative Soft function
 double Split_WEN::Soft(double z, double gamma){
