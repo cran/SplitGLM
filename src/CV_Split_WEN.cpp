@@ -5,7 +5,7 @@
  * Package Name: SplitGLM
  *
  * Created by Anthony-A. Christidis.
- * Copyright © Anthony-A. Christidis. All rights reserved.
+ * Copyright Â© Anthony-A. Christidis. All rights reserved.
  * ===========================================================
  */
 
@@ -582,7 +582,14 @@ double CV_Split_WEN::Linear_Deviance(arma::mat x, arma::vec y,
 double CV_Split_WEN::Logistic_Deviance(arma::mat x, arma::vec y,
                                        arma::vec intercept, arma::mat betas){
 
-  return(-2*arma::mean(y % (arma::mean(intercept) + x*arma::mean(betas,1)) - arma::log(1.0 + arma::exp(arma::mean(intercept) + x*arma::mean(betas,1)))));
+  //binomial dev
+  //return(-2*arma::mean(y % (arma::mean(intercept) + x*arma::mean(betas,1)) - arma::log(1.0 + arma::exp(arma::mean(intercept) + x*arma::mean(betas,1)))));
+  //scaled binomial dev
+  return(-2 * arma::mean((n/(2*arma::accu(y)) * y % (arma::mean(intercept) + x * arma::mean(betas, 1)) - (n/(2*arma::accu((y-1)*-1)) * arma::log(1.0 + arma::exp(arma::mean(intercept) + x * arma::mean(betas, 1)))));
+  //exp loss
+  //return(-2*arma::mean(y % (arma::mean(intercept) + x*arma::mean(betas,1)) - arma::log(1.0 + arma::exp(arma::mean(intercept) + x*arma::mean(betas,1)))));
+  //CE Loss
+  //return(-2 * arma::mean(y % (arma::mean(intercept) + x * arma::mean(betas, 1)) - arma::log(1.0 + arma::exp(arma::mean(intercept) + x * arma::mean(betas, 1)))));
 }
 // Gamma Deviance (MSPE)
 double CV_Split_WEN::Gamma_Deviance(arma::mat x, arma::vec y,
