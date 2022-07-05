@@ -169,7 +169,7 @@ void Split_WEN::Adjust_Expected_Weights(arma::uword & group){
 #include <iostream>
 
 template<class Object>
-Object elementwise_pow(const Object& base, const Object& p) {
+void elementwise_pow(const Object& base, const Object& p) {
     assert(base.n_elem == p.n_elem);
     Object result;
     result.copy_size(base);
