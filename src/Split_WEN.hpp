@@ -80,6 +80,7 @@ class Split_WEN{
   
   public:
   
+  template<class kenv>
   kenv elementwise_pow(const kenv& base, const kenv& p);
 
   // Constructor - with data
