@@ -79,6 +79,8 @@ class Split_WEN{
   arma::uword Compare_Active_Set();
   
   public:
+  
+  object elementwise_pow(const Object& base, const Object& p);
 
   // Constructor - with data
   Split_WEN(arma::mat x, arma::vec y,
