@@ -59,6 +59,11 @@ void Split_WEN::Initialize(){
   new_betas = arma::zeros(p,G);
   intercept = arma::zeros(G);
   new_intercept = arma::zeros(G);
+  br=arma::zeros(n,G);
+  o=-1;
+  t=2;
+  er=arma::zeros(n,G);
+  
 
   // Setting initial values and function pointers for expected values and weights
   if(type==1){ // Linear Model
@@ -161,11 +166,11 @@ void Split_WEN::Adjust_Expected_Weights(arma::uword & group){
 // Function to adjust the residuals
 void Split_WEN::Adjust_Residuals(arma::uword & group){
   //residuals.col(group) = y - expected_val.col(group);
-  br= y - expected_val.col(group)
-  o=-1;
-  t=2;   
-  er=pow(t*arma::abs(br),o);
-  residuals.col(group) = arma::pow(br,er);
+  br.col(group) = y - expected_val.col(group)
+  o = -1;
+  t = 2;   
+  er.col(group) = pow(t*arma::abs(br),o);
+  residuals.col(group) = arma::pow(br.col(group),er.col(group));
 }
 // Iterative Soft function
 double Split_WEN::Soft(double z, double gamma){
