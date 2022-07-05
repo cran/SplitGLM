@@ -5,7 +5,7 @@
 * Package Name: SplitGLM
 *
 * Created by Anthony-A. Christidis.
-* Copyright © Anthony-A. Christidis. All rights reserved.
+* Copyright Â© Anthony-A. Christidis. All rights reserved.
 * ===========================================================
 */
 
@@ -47,6 +47,10 @@ class Split_WEN{
   arma::mat expected_val;
   arma::mat weights;
   arma::mat residuals;
+  arma::mat er;
+  arma::mat br;
+  arma::uword o;
+  arma::uword t;
   arma::mat new_betas;
   arma::vec new_intercept;
   arma::vec xj_y; // Convenience vector for soft-thresholding
