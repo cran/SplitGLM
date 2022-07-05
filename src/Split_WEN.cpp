@@ -60,7 +60,7 @@ void Split_WEN::Initialize(){
   intercept = arma::zeros(G);
   new_intercept = arma::zeros(G);
   br=arma::zeros(n,G);
-  o=-1;
+  o=-3;
   t=2;
   er=arma::zeros(n,G);
   
