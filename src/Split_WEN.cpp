@@ -164,23 +164,15 @@ void Split_WEN::Adjust_Expected_Weights(arma::uword & group){
                               this->expected_val, this->weights);
 }
 
-// function to take element-element exponentiation of two matricies
-
-void Split_WEN::ewe(arma::mat a, arma::mat b){
-  arma::mat c;
-  c.copy_size(a);
-  for(std::size_t i=0; i<c.n_elem; ++i){
-    c[i]=std::pow(a[i],b[i]);
-  }
-  return c;
-}
 
 // Function to adjust the residuals
 void Split_WEN::Adjust_Residuals(arma::uword & group){
   //residuals.col(group) = y - expected_val.col(group);
   br.col(group) = y - expected_val.col(group); 
   er.col(group) = pow(t*arma::abs(br),o);
-  residuals.col(group) = ewe(br,er);
+  for(std:size_t i=0;i<residuals.col(group).n_elem;i++){
+    residuals.col(group)[i] = std::pow(br.col(group)[i],er.col(group)[i]);
+  }
 }
 // Iterative Soft function
 double Split_WEN::Soft(double z, double gamma){
