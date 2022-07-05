@@ -170,7 +170,7 @@ void Split_WEN::Adjust_Residuals(arma::uword & group){
   //residuals.col(group) = y - expected_val.col(group);
   br.col(group) = y - expected_val.col(group); 
   er.col(group) = pow(t*arma::abs(br),o);
-  for(std:size_t i=0;i<residuals.col(group).n_elem;i++){
+  for(std::size_t i=0;i<residuals.col(group).n_elem;i++){
     residuals.col(group)[i] = std::pow(br.col(group)[i],er.col(group)[i]);
   }
 }
