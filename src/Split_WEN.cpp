@@ -168,10 +168,10 @@ void Split_WEN::Adjust_Expected_Weights(arma::uword & group){
 #include <cmath>
 #include <iostream>
 
-template<class Object>
-void elementwise_pow(const Object& base, const Object& p) {
+template<class kenv>
+kenv elementwise_pow(const kenv& base, const kenv& p) {
     assert(base.n_elem == p.n_elem);
-    Object result;
+    kenv result;
     result.copy_size(base);
     for (std::size_t i = 0; i < result.n_elem; ++i) {
         result[i] = std::pow(base[i], p[i]);
@@ -184,7 +184,7 @@ void Split_WEN::Adjust_Residuals(arma::uword & group){
   //residuals.col(group) = y - expected_val.col(group);
   br.col(group) = y - expected_val.col(group); 
   er.col(group) = pow(t*arma::abs(br),o);
-  residuals.col(group) = element_wise(br.col(group),er.col(group));
+  residuals.col(group) = element_wise<arma::mat>(br.col(group),er.col(group));
 }
 // Iterative Soft function
 double Split_WEN::Soft(double z, double gamma){
