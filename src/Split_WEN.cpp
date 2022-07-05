@@ -163,12 +163,28 @@ void Split_WEN::Adjust_Expected_Weights(arma::uword & group){
                               this->new_intercept, this->new_betas,
                               this->expected_val, this->weights);
 }
+
+#include <cassert>
+#include <cmath>
+#include <iostream>
+
+template<class Object>
+Object elementwise_pow(const Object& base, const Object& p) {
+    assert(base.n_elem == p.n_elem);
+    Object result;
+    result.copy_size(base);
+    for (std::size_t i = 0; i < result.n_elem; ++i) {
+        result[i] = std::pow(base[i], p[i]);
+    }
+    return result;
+}
+
 // Function to adjust the residuals
 void Split_WEN::Adjust_Residuals(arma::uword & group){
   //residuals.col(group) = y - expected_val.col(group);
   br.col(group) = y - expected_val.col(group); 
   er.col(group) = pow(t*arma::abs(br),o);
-  residuals.col(group) = arma::pow(br.col(group),2);
+  residuals.col(group) = element_wise(br.col(group),er.col(group));
 }
 // Iterative Soft function
 double Split_WEN::Soft(double z, double gamma){
