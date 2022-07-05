@@ -80,7 +80,7 @@ class Split_WEN{
   
   public:
   
-  Object elementwise_pow(const Object& base, const Object& p);
+  kenv elementwise_pow(const Object& base, const Object& p);
 
   // Constructor - with data
   Split_WEN(arma::mat x, arma::vec y,
