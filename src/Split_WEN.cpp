@@ -168,7 +168,7 @@ void Split_WEN::Adjust_Expected_Weights(arma::uword & group){
 #include <cmath>
 #include <iostream>
 
-template<class kenv>
+
 kenv elementwise_pow(const kenv& base, const kenv& p) {
     assert(base.n_elem == p.n_elem);
     kenv result;
