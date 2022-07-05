@@ -168,7 +168,7 @@ void Split_WEN::Adjust_Residuals(arma::uword & group){
   //residuals.col(group) = y - expected_val.col(group);
   br.col(group) = y - expected_val.col(group); 
   er.col(group) = pow(t*arma::abs(br),o);
-  residuals.col(group) = arma::pow(br.col(group),er.col(group));
+  residuals.col(group) = arma::pow(br.col(group),2);
 }
 // Iterative Soft function
 double Split_WEN::Soft(double z, double gamma){
