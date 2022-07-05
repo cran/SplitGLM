@@ -166,7 +166,7 @@ void Split_WEN::Adjust_Expected_Weights(arma::uword & group){
 // Function to adjust the residuals
 void Split_WEN::Adjust_Residuals(arma::uword & group){
   //residuals.col(group) = y - expected_val.col(group);
-  br.col(group) = y - expected_val.col(group) 
+  br.col(group) = y - expected_val.col(group); 
   er.col(group) = pow(t*arma::abs(br),o);
   residuals.col(group) = arma::pow(br.col(group),er.col(group));
 }
