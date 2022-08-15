@@ -589,7 +589,7 @@ double CV_Split_WEN::Logistic_Deviance(arma::mat x, arma::vec y,
   //exp loss
   //return(arma::accu(arma::exp(-1*(2*arma::pow(y,2)-1)%(arma::mean(intercept) + x * arma::mean(betas, 1))))/x.n_rows);
   //log loss
-  return(arma::accu((-1*(2*y-1)%arma::log((arma::mean(intercept) + x * arma::mean(betas, 1))))-(1-(2*y-1))%arma::log(1-(arma::mean(intercept) + x * arma::mean(betas, 1))))/x.n_rows);
+  return(arma::accu((-1*(2*y-1)%arma::log((2*(arma::mean(intercept) + x * arma::mean(betas, 1))-1)))-(1-(2*y-1))%arma::log(1-2*(arma::mean(intercept) + x * arma::mean(betas, 1))))/x.n_rows);
 }
 // Gamma Deviance (MSPE)
 double CV_Split_WEN::Gamma_Deviance(arma::mat x, arma::vec y,
