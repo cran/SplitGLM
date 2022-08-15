@@ -5,7 +5,7 @@
  * Package Name: SplitGLM
  *
  * Created by Anthony-A. Christidis.
- * Copyright © Anthony-A. Christidis. All rights reserved.
+ * Copyright Â© Anthony-A. Christidis. All rights reserved.
  * ===========================================================
  */
 
@@ -59,6 +59,11 @@ void Split_WEN::Initialize(){
   new_betas = arma::zeros(p,G);
   intercept = arma::zeros(G);
   new_intercept = arma::zeros(G);
+  br=arma::zeros(n,G);
+  o=-3;
+  t=2;
+  er=arma::zeros(n,G);
+  
 
   // Setting initial values and function pointers for expected values and weights
   if(type==1){ // Linear Model
@@ -158,9 +163,16 @@ void Split_WEN::Adjust_Expected_Weights(arma::uword & group){
                               this->new_intercept, this->new_betas,
                               this->expected_val, this->weights);
 }
+
+
 // Function to adjust the residuals
 void Split_WEN::Adjust_Residuals(arma::uword & group){
   residuals.col(group) = y - expected_val.col(group);
+  /*br.col(group) = y - expected_val.col(group); 
+  er.col(group) = pow(t*arma::abs(br),o);
+  for(std::size_t i=0;i<residuals.col(group).n_elem;i++){
+    residuals.col(group)[i] = std::pow(br.col(group)[i],er.col(group)[i]);
+  }*/
 }
 // Iterative Soft function
 double Split_WEN::Soft(double z, double gamma){
