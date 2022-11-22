@@ -12,3 +12,6 @@
 
 # SplitGLM 1.0.4
 * Add multithreading for all cross-validation procedures.
+
+# SplitGLM 1.0.5
+* Removed invalid UTF-8 characters.
