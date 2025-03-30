@@ -4,7 +4,7 @@
 
 ## With R 3.1.0 or later, you can uncomment the following line to tell R to 
 ## enable compilation with C++11 (or even C++14) where available
-CXX_STD = CXX11
+## CXX_STD = CXX11
 
 ## Use the R_HOME indirection to support installations of multiple R version
 PKG_LIBS = $(shell "${R_HOME}/bin${R_ARCH_BIN}/Rscript.exe" -e "Rcpp:::LdFlags()") $(LAPACK_LIBS) $(BLAS_LIBS) $(FLIBS) $(SHLIB_PTHREAD_FLAGS)

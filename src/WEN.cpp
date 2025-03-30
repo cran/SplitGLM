@@ -84,7 +84,7 @@ void WEN::Initialize(){
     }
     else
       Compute_Expected_Weights = &WEN::Gamma_Update;
-    
+
   }  
   else if(type==4){ // Poisson GLM
     

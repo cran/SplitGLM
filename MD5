@@ -1,6 +1,6 @@
-efaa6d6418a69c7c07c4f1627023b6d9 *DESCRIPTION
+7d0df6da2ecd1074d350aeb5b243ce95 *DESCRIPTION
 d373889f3a235f4b414ba673410f165c *NAMESPACE
-822a4690f7eef3921d28739c48f4454a *NEWS
+32dcacaf170a112e645e5da0b5f7804e *NEWS
 090f29904f04d3617c62e5d0c926097f *R/Coefficient_Functions.R
 2648f7812baf371b8151961171b7d36c *R/Coefficient_Plot_Functions.R
 2df3fcd57675a6dcb1beea4a418ae1ce *R/Construction_Functions.R
@@ -9,10 +9,10 @@ f8c9dbeee0966049ed578c7644735cc6 *R/Prediction_Functions.R
 9f7bd257f3dc56357095e247eee13a31 *R/RcppExports.R
 f7ec5c1a4d3fb174784379957efb53f4 *R/SplitGLM.R
 5dcb5f6fff7aa28dcde7c00936220d2d *R/cv.SplitGLM.R
-6e9328e36b95cd4ade09898b1eea55cf *README.md
+d4f43340ae077473e3dd0f68818a6248 *README.md
 ccdbb882c645f67f951535d26054e50e *cleanup
-acd5eb882b0c1081c6cfd53ba6c2bf68 *configure
-b06d768110b6fe9e8ae7f7b4e3c88143 *configure.ac
+a956c2595aa28c060f10a47425c01374 *configure
+610f55e06fc591faaf0e0dedb704b754 *configure.ac
 e5ce541c21cd81c6e9f39a854c63cbee *configure.win
 49d099f6556f6e1b046a18ddab2936f8 *man/SplitGLM.Rd
 6d231d596a9b34ff4d4d41b4e236ec6d *man/coef.SplitGLM.Rd
@@ -27,12 +27,12 @@ fd5b690d4a63e818dc49a621ce06d3d2 *src/CV_Split_WEN_Main.cpp
 5456693390a2aa6f21029d669920bbff *src/CV_WEN.cpp
 2cfd8821785cb14890366994abe3c732 *src/CV_WEN.hpp
 09728da56ce03f0019e9c8198a486125 *src/Makevars.in
-01928104d4b57c82d4195b21f02b6b26 *src/Makevars.win
+26c4730965133bc7ff795fd0ad1a9405 *src/Makevars.win
 1451cd435efbde872a915e14975aee03 *src/RcppExports.cpp
 b2b3c74a8d42b9e9b305c50bb9d8bd97 *src/Split_WEN.cpp
 5ab6d6c65ab18ed9a2206972f9dde318 *src/Split_WEN.hpp
 92b0c36d4f5db5ac01fe52430f90e712 *src/Split_WEN_Main.cpp
-863393423b772e38625de723a8e6e07e *src/WEN.cpp
+c5c10694641f38151aeeb5d49f1ec4fd *src/WEN.cpp
 9b68e24b78d83715650da9f0cd088deb *src/WEN.hpp
 e6141e912f0e254b24bde79dad3961ab *src/autoconfig.h
 5045ae3e48cde1910f87c194f2aeacf3 *src/autoconfig.h.in

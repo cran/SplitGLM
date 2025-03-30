@@ -1,5 +1,5 @@
 
-[![Build Status](https://app.travis-ci.com/AnthonyChristidis/PSGD.svg?branch=master)](https://app.travis-ci.com/AnthonyChristidis/SplitGLM) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/SplitGLM)](https://cran.r-project.org/package=SplitGLM) [![Downloads](http://cranlogs.r-pkg.org/badges/SplitGLM)](https://cran.r-project.org/package=SplitGLM)
+[![Build Status](https://app.travis-ci.com/AnthonyChristidis/PSGD.svg?branch=master)](https://app.travis-ci.com/AnthonyChristidis/SplitGLM) [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/SplitGLM)](https://cran.r-project.org/package=SplitGLM) [![Downloads](https://cranlogs.r-pkg.org/badges/SplitGLM)](https://cran.r-project.org/package=SplitGLM)
 
 SplitGLM
 ========
